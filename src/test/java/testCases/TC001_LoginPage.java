@@ -8,9 +8,10 @@ import testBase.BaseClass;
 public class TC001_LoginPage extends BaseClass {
 	
 	@Test
-	public void LoginPage() {
+	public void LoginPage() throws InterruptedException {
 	Homepage hm = new Homepage(driver);
 	hm.clickLogin();
+	Thread.sleep(50000);
 	
 	Loginpage lp = new Loginpage(driver);
 	lp.login("manisha.sapra.nov@gmail.com");
